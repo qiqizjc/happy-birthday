@@ -50,7 +50,7 @@
         <h1>祝你23岁<span class="time" id="time"></span>快乐</h1>
 
         <p>
-            有种感觉在我心中你即是白月光也是朱砂痣。在我人生最低谷的阶段认识你，我和抱歉。也许当初没有喝醉，我会努力成为你的闺蜜吧。世上没有后悔药，错过了你，也是我错过一种人生选择。害，人生苦短，不能既要又要，你说的对，如果不是这个宿舍让我们相识，我们大约永远也不可能去了解对方。也没有多久我们就会长久的分开了，大概以后你也不会主动来联系我，毕竟没有什么理由会让你来联系我，也应该没有什么理由让我去联系你。终将，你走你的阳光道，我走我的独木桥。说来奇怪，我也会想要是能和你在一起，也许可以安安稳稳的幸幸福福的过一辈子。相信你是会找到合适的另一半，当我知道时，我大约会在心里默骂那个lucky bastard吧哈哈哈哈。
+            有种感觉在我心中你即是白月光也是朱砂痣。但也许当初没有喝醉，我会努力成为你的闺蜜吧。世上没有后悔药，错过了你，也是我错过一种人生选择。害，人生苦短，不能既要又要，你说的对，如果不是这个宿舍让我们相识，我们大约永远也不可能去了解对方。也没有多久我们就会长久的分开了，大概以后你也不会主动来联系我，毕竟没有什么理由会让你来联系我，也应该没有什么理由让我去联系你。终将，你走你的阳光道，我走我的独木桥。说来奇怪，我也会想要是能和你在一起，也许可以安安稳稳的幸幸福福的过一辈子。相信你是会找到合适的另一半，当我知道时，我大约会在心里默骂那个lucky bastard吧哈哈哈哈。
         </p>
     </div>
 
@@ -74,6 +74,23 @@
         }
 
         setInterval(updateTime, 1000);
+    </script>
+    <!-- Audio Player with Autoplay -->
+    <audio id="background-music" autoplay>
+        <source src="./林志炫 - 凤凰花开的路口.flac" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Optional JavaScript to ensure autoplay works when allowed -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audioPlayer = document.getElementById('background-music');
+            // Try to play the audio when the page loads
+            audioPlayer.play().catch(function (error) {
+                console.log('Autoplay was prevented:', error);
+                // You can add some user interaction here to play the audio
+            });
+        });
     </script>
 
 </body>
