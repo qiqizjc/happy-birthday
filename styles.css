@@ -1,0 +1,68 @@
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* Makes sure the watermark is not interactive */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="rgba(0, 0, 0, 0.1)" font-size="20" transform="rotate(-45 250 250)"><tspan x="50%" dy="1.2em">I am stupid</tspan><tspan x="50%" dy="1.2em">I should never be drunk</tspan></text></svg>');
+    background-size: 500px 500px;
+    background-repeat: repeat;
+    animation: scroll 50s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+    to {
+        transform: translateX(-500px) translateY(-500px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+/* .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.container {
+    text-align: center;
+    width: 80%; /* 设置容器宽度为80% */
+    max-width: 1200px; /* 设置最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+    border: 1px solid #ccc; /* 添加边框用于视觉效果 */
+    padding: 20px; /* 内边距 */
+    box-sizing: border-box; /* 包括边框和内边距在内的总宽度 */
+}
+.time {
+    font-size: 3em;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    display: inline;
+}
+.time {
+    font-size: inherit;
+    color: inherit;
+}
+
